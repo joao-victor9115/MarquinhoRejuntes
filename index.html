@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeuPortifólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>MeuPortifólio</h1>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="overlay" onclick="toggleMenu()"></div>
+
+    <aside class="menu-lateral">
+
+        <ul>
+            <li><a href="#inicio" onclick="toggleMenu()">Início</a></li>
+            <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
+            <li><a href="#contato" onclick="toggleMenu()">contato</a></li>
+        </ul>
+
+    </aside>
+
+    <main>
+        <section class="hero">
+            <h2 id="inicio">Marcos Rejuntes</h2>
+            <p>
+                Precisão, durabilidade e acabamento que valoriza seu ambiente
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-pri" onclick="window.open('https://wa.me/5548996097386', '_blank')"><i
+                        class="fa-brands fa-whatsapp"></i>
+                    Solicitar Orçamento
+
+
+                </button>
+                <button class="btn-sec">Ver Serviços</button>
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <h2>Sobre a empresa</h2>
+            <p>Atuamos com aplicação profissional de rejuntes e acabamentos, garantindo <br>durabilidade, estética e
+                limpeza em cada serviço. Trabalhamos com atenção <br>aos detalhes para valorizar seu ambiente.</p>
+
+            <div class="container">
+                <div class="card">
+                    <span class="icon">⏳</span>
+                    <p>15 anos de experiência</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🏠</span>
+                    <p>Atendimento residencial e comercial</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">✔</span>
+                    <p>Compromisso com prazo e qualidade</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="servicos">
+            <h2>Serviços</h2>
+            <ul>
+                <li style="list-style: none;">✔ Aplicação de rejunte tradicional</li>
+                <li style="list-style: none;">✔ Troca de rejunte antigo</li>
+                <li style="list-style: none;">✔ Rejunte epóxi</li>
+                <li style="list-style: none;">✔ Impermeabilização</li>
+                <li style="list-style: none;">✔ E entre outros serviços</li>
+            </ul>
+        </section>
+
+        <section class="depoimento">
+            <form>
+                <h2 id="contato">Deixe seu depoimento</h2>
+                <p>Seu feedback é muito importante para nós.</p>
+
+                <input type="text" name="name" placeholder="Seu nome" required>
+
+                <textarea name="message" placeholder="Deixe seu depoimento sobre nosso trabalho" required></textarea>
+
+                <input type="hidden" name="_subject" value="Novo depoimento recebido">
+                <input type="hidden" name="_captcha" value="false">
+
+                <button type="submit">Enviar depoimento</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            © 2025 Marcos Rejuntes. Desenvolvido por João Victor.
+        </p>
+    </footer>
+
+
+    <script>
+function toggleMenu(){
+    document.querySelector('.menu-lateral').classList.toggle('active');
+    document.querySelector('.overlay').classList.toggle('active');
+}
+</script>
+
+</body>
+
+</html>
